@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="bg-primary text-white text-center p-3">
+        <h1>Cabeçalho</h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container mt-4">
+        <div class="row">
+            <!-- Barra lateral (col-3 em telas maiores) -->
+            <aside class="col-12 col-md-3 mb-4 mb-md-0">
+                <div class="bg-light p-3">
+                    <h4>Barra Lateral</h4>
+                    <p>Conteúdo da barra lateral.</p>
+                </div>
+            </aside>
+
+            <!-- Conteúdo principal (col-9 em telas maiores) -->
+            <section class="col-12 col-md-9">
+                <div class="bg-light p-3">
+                    <h2>Conteúdo Principal</h2>
+                    <p>Este é o conteúdo principal da página. Em telas pequenas, ele ocupa toda a largura disponível.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; Rodape</p>
+    </footer>
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

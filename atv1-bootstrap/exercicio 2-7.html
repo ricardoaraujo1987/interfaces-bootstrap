@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 2-7</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Container para o grid */
+    .container-grid {
+      display: grid;
+      gap: 10px; /* Espaçamento entre as células */
+    }
+
+    /* Linhas ímpares (1ª, 3ª, 5ª) com 3 colunas de largura igual */
+    .linha:nth-child(odd) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Linhas pares (2ª e 4ª) com 5 colunas de largura igual */
+    .linha:nth-child(even) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* Estilo para os itens */
+    .item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .container-5 {
+      display: flex;
+    }
+    .coluna {
+      padding: 10px; /* Para adicionar um pouco de espaço */
+    }
+    .coluna-1 {
+      width: 50%;
+      background-color: #f2f2f2;
+    }
+    .coluna-2 {
+      width: 25%;
+      background-color: #d9d9d9;
+    }
+    .coluna-3 {
+      width: 25%;
+      background-color: #b3b3b3;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    /* Estilo para o conteúdo principal */
+    main {
+      min-height: 400px;
+    }
+  </style>
+
+</head>
+<body>
+    <h3>Exercicio 2</h3>
+
+    <h2>Importação do Bootstrap via CDN</h1>    
+    <p>
+      O uso de um **CDN (Content Delivery Network)** para importar o Bootstrap oferece várias vantagens, como a redução do tempo de carregamento, pois os arquivos são entregues a partir de servidores distribuídos globalmente, mais próximos do usuário. Além disso, como muitas páginas utilizam o mesmo CDN para bibliotecas populares, os navegadores podem armazenar em cache esses arquivos, economizando largura de banda e acelerando o carregamento em visitas subsequentes.
+    </p>
+    <p>
+      No entanto, existem também desvantagens. Caso o CDN esteja fora do ar ou o usuário tenha problemas de rede, o carregamento da página pode ser afetado. Além disso, se você estiver dependendo de uma versão específica do Bootstrap, pode não ter controle total sobre as atualizações do arquivo no CDN. Por fim, se a conexão do usuário com o CDN for lenta, isso pode afetar negativamente a performance da página.
+    </p>
+  </div>
+
+    <hr>
+
+
+ <h3>Exercicio 3</h3>
+  <div class="container bg-primary">
+    <p>Este é o container padrão (container). Ele tem uma largura máxima que se ajusta com base no tamanho da tela.</p>
+  </div>
+
+ 
+  <div class="container-fluid bg-info">
+    <p>Este é o container fluido (container-fluid). Ele ocupa 100% da largura da tela, independente do tamanho.</p>
+  </div>
+
+  
+  <div class="container-lg bg-warning">
+    <p>Este é o container largo (container-lg). Ele é similar ao container padrão, mas possui uma largura maior em telas grandes.</p>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <hr>
+
+  <h3>Exercicio 4</h3>
+  <div class="container mt-5">
+    <!-- Linha 1 (Ímpar) com 3 colunas -->
+    <div class="row">
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 1</div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 2</div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 3</div>
+      </div>
+    </div>
+
+    <!-- Linha 2 (Par) com 5 colunas -->
+    <div class="row">
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 1</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 2</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 3</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 4</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 5</div>
+      </div>
+    </div>
+
+    <!-- Linha 3 (Ímpar) com 3 colunas -->
+    <div class="row">
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 1</div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 2</div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 3</div>
+      </div>
+    </div>
+
+    <!-- Linha 4 (Par) com 5 colunas -->
+    <div class="row">
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 1</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 2</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 3</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 4</div>
+      </div>
+      <div class="col-12 col-sm-2">
+        <div class="p-3 border bg-light">Item 5</div>
+      </div>
+    </div>
+
+    <!-- Linha 5 (Ímpar) com 3 colunas -->
+    <div class="row">
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 1</div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 2</div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="p-3 border bg-light">Item 3</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>Exercicio 5</h3>
+
+  <div class="container">
+    <div class="row">  
+    <div class="coluna coluna-1">Coluna 1 - 50%</div>
+    <div class="coluna coluna-2">Coluna 2 - 25%</div>
+    <div class="coluna coluna-3">Coluna 3 - 25%</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>Exercicio 6</h3>
+
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3 bg-primary text-white">Coluna 1</div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3 bg-secondary text-white">Coluna 2</div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3 bg-success text-white">Coluna 3</div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3 bg-danger text-white">Coluna 4</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>Exercicio 7</h3>
+
+    <!-- Cabeçalho -->
+    <header class="bg-primary text-white text-center p-3">
+        <h1>Cabeçalho</h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container mt-4">
+        <div class="row">
+            <!-- Barra lateral (col-3 em telas maiores) -->
+            <aside class="col-12 col-md-3 mb-4 mb-md-0">
+                <div class="bg-light p-3">
+                    <h5>Barra Lateral</h5>
+                    <p>Conteúdo da barra lateral.</p>
+                </div>
+            </aside>
+
+            <!-- Conteúdo principal (col-9 em telas maiores) -->
+            <section class="col-12 col-md-9">
+                <div class="bg-light p-3">
+                    <h5>Conteúdo Principal</h5>
+                    <p>Este é o conteúdo principal da página. Em telas pequenas, ele ocupa toda a largura disponível.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p> Rodape</p>
+    </footer>
+
+
+
+</body>
+</html>
+
